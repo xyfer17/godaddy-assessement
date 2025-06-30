@@ -13,7 +13,7 @@ function App() {
           <h1>GoDaddy GitHub Repositories</h1>
         </header>
         <main>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className='loading'></div>}>
             <Routes>
               <Route path="/" element={<RepoList />} />
               <Route path="/repo/:repoName" element={<RepoDetails />} />

@@ -81,3 +81,31 @@ body {
 .repo-details a:hover {
   background-color: #0056b3;
 }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  font-size: 1.2rem;
+  color: #0366d6;
+  position: relative;
+}
+
+.loading::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  border: 3px solid #0366d6;
+  border-top: 3px solid #b3d1f7;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
