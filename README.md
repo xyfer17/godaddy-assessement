@@ -8,6 +8,7 @@ This is a simple React application, built with Vite, that fetches and displays a
 * Blazing fast development server and HMR powered by Vite.
 * Click on a repository to see a detailed view.
 * **Reusable `useFetch` hook** for clean and maintainable data fetching.
+* **Routing uses lazy loading:** Both the repository list and details views are loaded lazily using React's `lazy` and `Suspense` for optimal performance.
 * Detailed view includes:
     * Title and Description
     * Link to the repository
@@ -18,7 +19,7 @@ This is a simple React application, built with Vite, that fetches and displays a
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/xyfer17/godaddy-assessement.git](https://github.com/xyfer17/godaddy-assessement.git)
+    git clone https://github.com/xyfer17/godaddy-assessement.git
     cd godaddy-assessement
     ```
 
@@ -45,6 +46,7 @@ This is a simple React application, built with Vite, that fetches and displays a
 * **`useFetch` (Custom Hook):** A reusable hook located in `src/hooks/` that encapsulates all data-fetching logic, including loading, error, and data states. It makes components cleaner and follows modern React best practices.
 * **axios:** For making HTTP requests to the GitHub API within our custom hook.
 * **react-router-dom:** For handling client-side routing.
+* **React Lazy Loading in Routing:** The main routes (`RepoList` and `RepoDetails`) are loaded using React's `lazy` and `Suspense` to improve performance and reduce initial bundle size.
 * **Vitest & React Testing Library:** For running fast, modern unit and component tests.
 
 ## Aspects Skipped or Simplified
